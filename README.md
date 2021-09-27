@@ -7,6 +7,6 @@
 ## Schedule:
 Phase 1:   
 (a) Twitter APIs.   
-(b) Google NLP.
+(b) Google NLP.  
 Phase 2:   
 (a)Build your own social media analyzer. 
