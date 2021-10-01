@@ -1,5 +1,5 @@
-                          Total  Percentage
-Mixed                     34           57.63
-Clearly Negative      11           18.64
-Neutral                     7           11.86
-Clearly Positive         7           11.86
+                       Total  Percentage
+Mixed                     34       57.63
+Clearly Negative          11       18.64
+Neutral                    7       11.86
+Clearly Positive           7       11.86
