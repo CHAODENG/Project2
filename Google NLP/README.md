@@ -22,8 +22,6 @@ The next step we should do is to process the tweets like removing the special sy
 After the above steps have been done, we can use Google API and the result of training model in Cloud to do sentiment analysis. It will generate the score to reflect the people's sentiment.  
 Therefore, the sentiment can be defined by the range of score. For example, I define the person who get the score between -0.5 and -1 is **Clearly Negative** or person who score from 0.5 to 1.0 is **Clearly Positive**.  
 ![image](https://user-images.githubusercontent.com/90479627/135563507-7d18b0f8-0bc8-421f-ae5a-41f4c1709cd8.png)  
-Then,by computing the result gotten from the sentiment analysis, we can count the number of people in each group and their percentages. And the specific result is shown below:  
-![SRFB@Y%3 3_50 XGNW_IPSV](https://user-images.githubusercontent.com/90479627/135564784-b7b46a05-fe3b-4b71-b051-fd8692254c3c.png)
  
 ## Conclusions
 In this phase, we have the experience using Google NLP and data from Twitter API to do sentiment analysis. And I know how to build the project in Google Cloud and train my own model.  
