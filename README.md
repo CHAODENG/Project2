@@ -28,6 +28,6 @@ This product is designed to help those who wanna get the feedback or sentiment a
 
 3. Thus, by concluding the result, we can get the choices that people are more inclined to. And multiple choices or recommendations will be shown for the users.  
 
-4. For those recommendations, people can re-search to ensure whether it has been selected by most of people and gets nice feedback.
+4. For those recommendations, people can re-search the key word to ensure whether it has been selected by most of people and gets nice feedback.
 
 5. After the final search, the people can narrow the selection to one or two and determine what they will choose to do.
