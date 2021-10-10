@@ -8,12 +8,6 @@ import pandas as pd
 import json
 import re
 
-# Count the number of people after we get the result
-def count_percentage(twitter_list,column):
-    total=twitter_list.loc[:,column].value_counts(dropna=False)
-    percentage=round(twitter_list.loc[:,column].value_counts(dropna=False,normalize=True)*100,2)
-    return pd.concat([total,percentage],axis=1,keys=['Total','Percentage'])
-
 # for security, we can load credentials from json file
 with open("twitter_credentials.json", "r") as file:
     creds = json.load(file)
@@ -66,5 +60,3 @@ for index,text in tl_list['text'].iteritems():
         tl_list.loc[index, 'sentiment'] = "Mixed";
 #print(tl_list)
 
-#Count_values for sentiment
-print(count_percentage(tl_list,"sentiment"))
