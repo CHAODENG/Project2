@@ -45,6 +45,6 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.access_token }}
           ACCESS_TOKEN_SECRET: ${{ secrets.access_secret }} 
       run: |
-        cd action\ Unit Test
+        cd Unit\ Test
         python TwitterAPI.py
         python Test_TwitterAPI.py
