@@ -8,7 +8,7 @@ def get_authorization():
 def get_my_credentials(tweets):
     try:
         return tweets.verify_credentials()
-    except Exception：
+    except Exception:
         sys.exit("TwythonAuthError")
         
 def get_home_timeline(tweets):
