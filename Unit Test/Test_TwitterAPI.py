@@ -9,3 +9,7 @@ class Unit_Test(unittest.TestCase):
         with open('my_credentials_info.json','r') as file:
             credentials = json.load(file)
         self.assertEqual(TAPI.get_my_credentials(tweets),credentials,"Error")
+        
+if __name__ == '__main__':
+    print('Start my test')
+    unittest.main()
