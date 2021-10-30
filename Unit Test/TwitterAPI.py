@@ -1,5 +1,4 @@
 from twython import Twython
-import pandas as pd
 import json
 import os
 import sys
