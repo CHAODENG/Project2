@@ -32,12 +32,12 @@ def get_query_info(tweets):
     return dict_
 # for security, we can load credentials from json file or sys
 # before this step, you should use key.py to generate your json file
+consumer_key = os.getenv('CONSUMER_KEY')
+consumer_secret = os.getenv('CONSUMER_SECRET')
+access_token = os.getenv('ACCESS_TOKEN')
+access_secret = os.getenv('ACCESS_SECRET')
 
 if __name__ == "__main__":
-    consumer_key = os.getenv('CONSUMER_KEY')
-    consumer_secret = os.getenv('CONSUMER_SECRET')
-    access_token = os.getenv('ACCESS_TOKEN')
-    access_secret = os.getenv('ACCESS_SECRET')
     # Instantiate an object
     tweets = get_authorization()
     #credential = get_my_credentials(tweets)
