@@ -28,8 +28,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install twython
         pip install pytest
-        pip install pandas
-        pip install json
         python -m pip install flake8 pytest coverage
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
