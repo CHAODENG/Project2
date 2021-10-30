@@ -1,20 +1,25 @@
 from twython import Twython
 import pandas as pd
 import json
+import os
+import sys
 
-def get_authorization(creds):
-    return Twython(creds['CONSUMER_KEY'], creds['CONSUMER_SECRET'],creds['ACCESS_TOKEN'],creds['ACCESS_SECRET'])
+def get_authorization():
+    return Twython(consumer_key, consumer_secret, access_token, access_secret)
 def get_my_credentials(tweets):
     return tweets.verify_credentials()
-# for security, we can load credentials from json file
+# for security, we can load credentials from json file or sys
 # before this step, you should use key.py to generate your json file
-with open("twitter_credentials.json", "r") as file:
-    creds = json.load(file)
+
+consumer_key = os.getenv('CONSUMER_KEY')
+consumer_secret = os.getenv('CONSUMER_SECRET')
+access_token = os.getenv('ACCESS_TOKEN')
+access_secret = os.getenv('ACCESS_TOKEN_SECRET')
+
 
 # Instantiate an object
-tweets = get_authorization(creds)
+tweets = get_authorization()
 credential = get_my_credentials(tweets)
-print(tweets.get_home_timeline())
 
 print(credential)
 # Create a query:    q, result_type, count and lang
