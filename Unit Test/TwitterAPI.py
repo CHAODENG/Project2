@@ -8,8 +8,11 @@ def get_authorization():
     return Twython(consumer_key, consumer_secret, access_token, access_secret)
 def get_my_credentials(tweets):
     return tweets.verify_credentials()
+def get_home_timeline(tweets):
+    return tweets.get_home_timeline()
 # for security, we can load credentials from json file or sys
 # before this step, you should use key.py to generate your json file
+
 
 consumer_key = os.getenv('CONSUMER_KEY')
 consumer_secret = os.getenv('CONSUMER_SECRET')
@@ -20,8 +23,8 @@ access_secret = os.getenv('ACCESS_TOKEN_SECRET')
 # Instantiate an object
 tweets = get_authorization()
 credential = get_my_credentials(tweets)
+home_timeline = get_home_timeline(tweets)
 
-print(credential)
 # Create a query:    q, result_type, count and lang
 # respectively for the search keyword, type, count, and language of results.
 query = {
@@ -39,9 +42,10 @@ for status in tweets.search(**query)['statuses']:
     dict_['text'].append(status['text'])
     dict_['favorite_count'].append(status['favorite_count'])
 
-with open("twitter_info.json", "w") as file:
-    json.dump(dict_, file,indent=4)
-with open("my_credentials_info.json", "w") as file:
-    json.dump(credential, file,indent=4)
-
+#with open("twitter_info.json", "w") as file:
+#    json.dump(dict_, file,indent=4)
+#with open("my_credentials_info.json", "w") as file:
+#    json.dump(credential, file,indent=4)
+#with open("my_home_timeline.json","w") as file:
+#    json.dump(home_timeline, file, indent=4)
 return dic_
