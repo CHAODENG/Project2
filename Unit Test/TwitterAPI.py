@@ -36,7 +36,7 @@ access_secret = os.getenv('ACCESS_SECRET')
 if __name__ == "__main__":
     # Instantiate an object
     tweets = get_authorization()
-    #credential = get_my_credentials(tweets)
+    credential = get_my_credentials(tweets)
     home_timeline = get_home_timeline(tweets)
     dict_ = get_query_info(tweets)
 
