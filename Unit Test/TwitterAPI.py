@@ -44,4 +44,4 @@ with open("twitter_info.json", "w") as file:
 with open("my_credentials_info.json", "w") as file:
     json.dump(credential, file,indent=4)
 
-print(dict_)
+return dic_
