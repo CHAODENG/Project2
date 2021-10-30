@@ -6,7 +6,11 @@ import sys
 def get_authorization():
     return Twython(consumer_key, consumer_secret, access_token, access_secret)
 def get_my_credentials(tweets):
-    return tweets.verify_credentials()
+    try:
+        return tweets.verify_credentials()
+    except Exception：
+        sys.exit("TwythonAuthError")
+        
 def get_home_timeline(tweets):
     return tweets.get_home_timeline()
 def get_query_info(tweets):
